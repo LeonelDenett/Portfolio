@@ -121,7 +121,7 @@ export const GlobalStyle = createGlobalStyle`
         justify-content: center;
         align-items: center;
         padding-top: 5rem;
-        padding-bottom: 2rem;
+        padding-bottom: 5rem;
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -189,10 +189,103 @@ export const GlobalStyle = createGlobalStyle`
         z-index: 7;
     }
     /* End About Page */
+    /* Portfolio Page */
     .portfolio {
         background-color: #f5f5f5;
         z-index: 1;
     }
+    .mediaCardContainer{
+        width: 100%;
+    }
+    .cardContainer {
+        max-width: 100%;
+        max-height: 100%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        transition: all 0.5s;
+    }
+    .cardContainer:hover {
+        box-shadow: rgb(38, 57, 77) 0px 20px 20px -10px;
+    }
+    .action {
+        position: relative;
+        max-height: 345px;
+    }
+    .action:hover .media{
+        scale: 1.4
+    }
+    .action:hover .bgColorUp{
+        top: 0;
+        transform: translateY(0px);
+        z-index: 8;
+        opacity: 0.4;
+        background-color: black;
+    }
+    .action:hover .bgColorDown{
+        top: 0px;
+        transform: translateY(0px);
+        z-index: 8;
+        opacity: 0.4;
+        background-color: black;
+    }
+    .action:hover .boxDown{
+        top: 0;
+        transform: translateY(0px);
+        z-index: 9;
+    }
+    .action:hover .boxUp{
+        top: 0;
+        transform: translateY(0px);
+        z-index: 9;
+    }
+    .media {
+        height: 300px;
+        max-height: 300px;
+        transition: all 1s;
+    }
+    .bgColor{
+        width: 100%;
+        height: 100%;
+        z-index: 8;
+        position: absolute;
+        transition: all 1s;
+    }
+    .bgColorUp{
+        top: 300px;
+        transform: translateY(100%);
+    }
+    .bgColorDown{
+        top: -300px;
+        transform: translateY(-300px);
+    }
+    .box{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s;
+    }
+    .boxDown {
+        top: 300px;
+        transform: translateY(-600px);
+    }
+    .boxUp {
+        top: 300px;
+        transform: translateY(100%);
+    }
+    .circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        background-color: gold;
+        transition: all 1s;
+    }
+    
+
     .contact {
         z-index: 1;
     }

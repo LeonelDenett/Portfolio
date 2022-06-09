@@ -68,7 +68,8 @@ let theme = createTheme({
         titlePages: {
             fontSize: '3rem',
             fontWeight: 600,
-            letterSpacing: '1px'
+            letterSpacing: '1px',
+            textAlign: 'center'
         },
         subtitles: {
             fontSize: '1.7rem',

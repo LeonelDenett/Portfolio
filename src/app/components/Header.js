@@ -11,6 +11,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Waypoint } from "react-waypoint";
 import Scrollspy from 'react-scrollspy'
 import {scrollSmoothTo} from '../functions/functions';
+import {motion} from 'framer-motion'
 
 export default function Header() {
     // Set up NavBar
@@ -36,6 +37,7 @@ export default function Header() {
         </AppBar>
         }
         <Waypoint
+        scrollableAncestor={window}
             onEnter={() => setTopNavbarHide(true)}
             onLeave={() => setTopNavbarHide(true)}
         />

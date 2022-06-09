@@ -18,6 +18,7 @@ import IconButton from '@mui/material/IconButton';
 // Other
 import {scrollSmoothTo} from '../functions/functions'
 import { Waypoint } from 'react-waypoint';
+import {motion} from 'framer-motion';
 
 export default function About(props) {
     // Queries
@@ -72,8 +73,8 @@ export default function About(props) {
     return (
         <Box className='pages about' id="about">
             <Box className='containerBox'>
-            <Typography component="h2" variant="titlePages" color="titlePage">ABOUT</Typography>
-            <Box className="underline"></Box>
+            <Typography variant="titlePages" color="titlePage" id="abouttitle" component={motion.h2} whileInView={{y:0}} animate={{y:100}} transition={{duration: 0.8}}>ABOUT</Typography>
+            <Box className="underline" component={motion.div} whileInView={{x:0}} animate={{x:-600}} transition={{duration: 0.8}}></Box>
             <Waypoint
                 onEnter={() => setIconDown(true)}
                 onLeave={() => setIconDown(false)}
@@ -130,13 +131,17 @@ export default function About(props) {
                                 <Grid item xs={12} md={6} style={{position: 'relative'}} sx={{mt:{md: 2.6, lg: 6, }, bottom:{xs: '4.5rem', sm: '3.5rem'}}}>
                                 {
                                 skills.map(skill => (
-                                    <Box className='skillsContainerAbout' key={[skill.id]}>
+                                    <Box className='skillsContainerAbout' key={[skill.id]}
+                                    component={motion.div}
+                                    whileInView={{x:0}}
+                                    animate={{x:-300}}
+                                    >
                                         <Box className="skillsName">
                                             <Typography variant='skillsTitle' color="primary">{skill.name}</Typography>
                                         </Box>
                                         <Box className="skillsProgressContainer">
                                             <LinearProgress className="skillsLinearProgress" variant="determinate" value={skill.value} color="secondary"/>
-                                            <LinearProgress className="skillsLinearProgress2" style={skill.css} variant="indeterminate" value={skill.value} color="blue"/>
+                                            <LinearProgress className="skillsLinearProgress2" style={skill.css} variant="indeterminate" color="blue"/>
                                         </Box>
                                         {
                                         isMobile ? null :
