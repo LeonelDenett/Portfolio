@@ -45,12 +45,6 @@ export const GlobalStyle = createGlobalStyle`
         color: #e3f2fd;
     }
     /* End Header */
-    /* Footer */
-    .footer{
-        min-height: 120px;
-        background-color: darkkhaki;
-    }
-    /* End Footer */
     /* Pages Set Up */
     .layout{
         min-height: 100vh;
@@ -86,8 +80,8 @@ export const GlobalStyle = createGlobalStyle`
         align-items: center;
     }
     .dashboardShadow{
-        background: rgb(2,0,36);
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+        background: rgb(4,28,50);
+        background: linear-gradient(180deg, rgba(4,28,50,1) 50%, rgba(2,131,165,1) 90%, rgba(0,212,255,1) 100%);
         width: 100%;
         height: 100vh;
         position: absolute;
@@ -115,7 +109,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     /* End Dashboard Page */
     /* About Page */
-    .about, .portfolio {
+    .about, .portfolio, .contact {
         z-index: 1;
         flex-direction: column;
         justify-content: center;
@@ -193,6 +187,8 @@ export const GlobalStyle = createGlobalStyle`
     .portfolio {
         background-color: #f5f5f5;
         z-index: 1;
+        padding-left: 14%;
+        padding-right: 14%;
     }
     .mediaCardContainer{
         width: 100%;
@@ -284,9 +280,59 @@ export const GlobalStyle = createGlobalStyle`
         background-color: gold;
         transition: all 1s;
     }
-    
-
     .contact {
+        background: rgb(4,28,50);
+        background: linear-gradient(145deg, rgba(4,28,50,1) 50%, rgba(2,131,165,1) 90%, rgba(0,212,255,1) 100%);
         z-index: 1;
+        padding-left: 14%;
+        padding-right: 14%;
+        display: flex;
+        flex: 1;
     }
+    .bgTest{
+        opacity: 0.5;
+        position: absolute;
+    }
+    .test{
+        clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        background-color: red;
+    }
+    .lineWhite::after{
+        content: "";
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 5.5rem;
+        height: 5px;
+        background-color: #e3f2fd;
+        margin: auto;
+        position: relative;
+        left: 7px;
+    }
+
+    .formContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 2px solid #e3f2fd;
+        height: 30rem;
+        border-radius: 84% 16% 85% 15% / 31% 85% 15% 69%;
+        padding: 2rem;
+    }
+    .inputForm{
+        margin-bottom: 1.3rem;
+    }
+    .footer{
+        display: flex;
+        flex:1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 5vh;
+        width: 100%;
+        border-top: 2px solid #f50057;
+        background-color: #041c32;
+    }
+    
 `

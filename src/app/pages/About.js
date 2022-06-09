@@ -73,8 +73,8 @@ export default function About(props) {
     return (
         <Box className='pages about' id="about">
             <Box className='containerBox'>
-            <Typography variant="titlePages" color="titlePage" id="abouttitle" component={motion.h2} whileInView={{y:0}} animate={{y:100}} transition={{duration: 0.8}}>ABOUT</Typography>
-            <Box className="underline" component={motion.div} whileInView={{x:0}} animate={{x:-600}} transition={{duration: 0.8}}></Box>
+            <Typography variant="titlePages" color="titlePage" id="abouttitle" component={motion.h2} whileInView={{y:0}} animate={{y:100}} transition={{duration: 0.5, type: 'spring', stiffness: 60}}>ABOUT</Typography>
+            <Box className="underline" component={motion.div} whileInView={{x:0}} animate={{x:-600}} transition={{duration: 0.5, type: 'spring', stiffness: 60}}></Box>
             <Waypoint
                 onEnter={() => setIconDown(true)}
                 onLeave={() => setIconDown(false)}

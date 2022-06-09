@@ -15,6 +15,7 @@ import Dashboard from '../pages/Dashboard';
 // Components
 import Header from './Header';
 import ParticlesBackground from '../components/Particles';
+import Footer from './Footer';
 
 const greyColor = grey[700];
 const greyBackground = grey[100];
