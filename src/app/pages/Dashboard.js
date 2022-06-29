@@ -1,4 +1,6 @@
 import React from 'react';
+// Styles
+import {DashboardStyles} from '../styles/DashboardStyles';
 // Mui Components
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -10,6 +12,7 @@ import {scrollSmoothTo} from '../functions/functions'
 export default function Dashboard() {
     return (
         <Box className='pages dashboard' id="dashboard">
+        <DashboardStyles/>
             <Box className='containerBox'>
                 <Typography component="h1" variant='titleDashboard' color="primary">
                     Hello, I'm

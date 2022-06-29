@@ -1,6 +1,10 @@
 import React from 'react';
 // Global Styles
 import {GlobalStyle} from '../styles/GlobalStyles';
+// Components
+import Header from './Header';
+import ParticlesBackground from '../components/Particles';
+import Footer from './Footer';
 // Mui Components
 import {CssBaseline} from '@mui/material'
 import { createTheme, ThemeProvider, responsiveFontSizes  } from '@mui/material/styles';
@@ -12,10 +16,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Portfolio from '../pages/Portfolio';
 import Dashboard from '../pages/Dashboard';
-// Components
-import Header from './Header';
-import ParticlesBackground from '../components/Particles';
-import Footer from './Footer';
+// Others
 
 const greyColor = grey[700];
 const greyBackground = grey[100];
@@ -70,7 +71,7 @@ let theme = createTheme({
             fontSize: '3rem',
             fontWeight: 600,
             letterSpacing: '1px',
-            textAlign: 'center'
+            textAlign: 'center',
         },
         subtitles: {
             fontSize: '1.7rem',
@@ -83,13 +84,18 @@ let theme = createTheme({
         },
         skillsTitle: {
             fontSize: '0.8rem'
+        },
+        percentage: {
+            fontSize: '0.8rem',
+            fontWeight: 600,
+            '@media (min-width:1200px)': {
+                fontSize: '1rem',
+            },
         }
     },
 });
 
-
 theme = responsiveFontSizes(theme);
-
 
 export default function Layout() {
     return (

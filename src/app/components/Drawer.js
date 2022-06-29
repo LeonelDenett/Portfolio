@@ -6,7 +6,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 // Icons
 import IconButton from '@mui/material/IconButton';

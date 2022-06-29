@@ -31,7 +31,7 @@ export default function Header() {
 					<Typography component="a" variant='navLinks' color="primary" onClick={() => {scrollSmoothTo('dashboard')}}>Dashboard</Typography>
 					<Typography component="a" variant='navLinks' color="primary" onClick={() => {scrollSmoothTo('about')}}>About</Typography>
 					<Typography component="a" variant='navLinks' color="primary" onClick={() => {scrollSmoothTo('portfolio')}}>Portfolio</Typography>
-					<Typography component="a" variant='navLinks' color="primary"  onClick={() => {scrollSmoothTo('contact')}}>Contact</Typography>
+					<Typography component="a" variant='navLinks' color="primary" onClick={() => {scrollSmoothTo('contact')}}>Contact</Typography>
 				</Scrollspy>
             </Toolbar>
         </AppBar>
